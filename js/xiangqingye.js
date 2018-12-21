@@ -79,29 +79,16 @@ minus.onclick = function(){
 	}
 }
 
-// var shop = document.getElementsByClassName("e1")[0];
-// var add = document.getElementsByClassName("e2")[0];
-// shop.onclick = jump;
-// add.onclick = jump;
-// function jump(){
-// 	var body = document.getElementsByClassName("body")[0];
-// 	var div = document.createElement("div");
-// 	var div1 = document.createElement("button");
-// 	var div2 = document.createElement("div");
-// 	var btu1 = document.createElement("button");
-// 	var btu2 = document.createElement("button");
-// 	body.setAttribute("class","gray1");
-// 	div.setAttribute("class","block");
-// 	div1.setAttribute("class","div1");
-// 	div2.setAttribute("class","div2");
-// 	btu1.setAttribute("class","btu1");
-// 	btu2.setAttribute("class","btu2");
-// 	div1.innerHTML = "×";
-// 	btu1.innerHTML = "继续购物";
-// 	btu2.innerHTML = "去购物车结算";
-// 	div.appendChild(div1);
-// 	div.appendChild(div2);
-// 	div.appendChild(btu1);
-// 	div.appendChild(btu2);
-// 	body.appendChild(div);
-// }
+function ShowDiv(show_div,bg_div){
+	var scrollHeight = document.body.scrollHeight; //文档高度
+	document.getElementById(bg_div).style.height=scrollHeight+'px';
+	
+	document.getElementById(show_div).style.display='block';
+	document.getElementById(bg_div).style.display='block';
+};
+//关闭弹出层
+function CloseDiv(show_div,bg_div)
+{
+	document.getElementById(show_div).style.display='none';
+	document.getElementById(bg_div).style.display='none';
+};
