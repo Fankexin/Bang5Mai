@@ -7,12 +7,12 @@ var div = document.getElementsByClassName("leftTop")[0].children[0];
 div.style.left = 0;
 sp0.onmouseover = function(){
 	sp0.setAttribute("style","border: 3px solid #ff9003");
-	sp1.setAttribute("style","border: none");
+	sp1.setAttribute("style","border: 3px solid #fff");
 	div.style.left = 0;
 }
 sp1.onmouseover = function(){
 	sp1.setAttribute("style","border: 3px solid #ff9003");
-	sp0.setAttribute("style","border: none");
+	sp0.setAttribute("style","border: 3px solid #fff");
 	div.setAttribute("style","left:-410px");
 }
 spanl.onclick = next;
@@ -20,12 +20,12 @@ spanr.onclick = next;
 function next(){
 	if(div.style.left == "0px"){
 		sp1.setAttribute("style","border: 3px solid #ff9003");
-		sp0.setAttribute("style","border: none");
+		sp0.setAttribute("style","border: 3px solid #fff");
 		div.setAttribute("style","left:-410px");
 		return;
 	}else{
 		sp0.setAttribute("style","border: 3px solid #ff9003");
-		sp1.setAttribute("style","border: none");
+		sp1.setAttribute("style","border: 3px solid #fff");
 		div.setAttribute("style","left:0");
 		return;
 	}
