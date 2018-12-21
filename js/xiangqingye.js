@@ -79,6 +79,10 @@ minus.onclick = function(){
 	}
 }
 
+var e1 = document.getElementsByClassName("e1")[0];
+var e2 = document.getElementsByClassName("e2")[0];
+e1.setAttribute("onclick","ShowDiv('MyDiv','fade')");
+e2.setAttribute("onclick","ShowDiv('MyDiv','fade')");
 function ShowDiv(show_div,bg_div){
 	var scrollHeight = document.body.scrollHeight; //文档高度
 	document.getElementById(bg_div).style.height=scrollHeight+'px';
