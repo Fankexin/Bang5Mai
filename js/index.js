@@ -2,7 +2,7 @@ window.onload = function(){
 	var head = document.getElementsByClassName('head')[0];
 	window.onscroll = function(){
 		var st = document.documentElement.scrollTop || document.body.scrollTop;
-		if(st>100){
+		if(st>180){
 			head.style.position = 'fixed';
 		}else{
 			head.style.position = 'static';
