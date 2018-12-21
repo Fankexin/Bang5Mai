@@ -145,8 +145,8 @@
 						<div class="d2">您已选择</div>
 						<div class="d3">“150ml”</div>
 					</div>					
-					<button class="e1">立即购买</button>
-					<button class="e2">加入购物车</button>
+					<button class="e1"  onclick="ShowDiv('MyDiv','fade')">立即购买</button>
+					<button class="e2"  onclick="ShowDiv('MyDiv','fade')">加入购物车</button>
 				</div>			
 			</div>
 			<div class="right"></div>
@@ -228,6 +228,13 @@
 			<li><img src="../img/bo6.png"></li>
 			<li><img src="../img/bo7.png"></li>
 		</ul>
+	</div>
+	<div id="fade" class="black_overlay"></div>
+	<div id="MyDiv" class="white_content">
+		<span class="div1" onclick="CloseDiv('MyDiv','fade')">×</span>
+		<div class="div2"><img src="../img/rr11_02.jpg"></div>
+		<button onclick="CloseDiv('MyDiv','fade')" class="btu1">继续购物</button>
+		<button onclick="CloseDiv('MyDiv','fade')" class="btu2">去购物车结算</button>
 	</div>
 	<script src="../js/xiangqingye.js" type="text/javascript"></script>
 </body>
