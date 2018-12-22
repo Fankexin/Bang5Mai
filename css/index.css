@@ -550,3 +550,82 @@ a{
 .bot2 li{
 	display: inline-block;
 }
+
+/*右边开始*/
+.beside li{
+    float: right;
+    display: block;
+    z-index: 1;
+}
+.one{
+    position: fixed;
+    top: 70px;
+    right: -89px;
+}
+.one1{
+    width: 130px;
+    height: 110px;
+}
+.one11{
+    margin-top: -5px;
+    margin-left: 1px;
+    width: 129px;
+}
+.two{
+    width: 130px;
+    height: 140px;
+    position: fixed;
+    top: 180px;
+    right: -89px;
+    background: #fc9a6d;
+}
+.two1{
+    font-size: 14px;
+    position: absolute;
+    top:50px;
+}
+.two2{
+    width: 42px;
+    height: 20px;
+    top:80px;
+    left: 60px;
+    background: #fc9a6d;
+    border:1px #fff solid;
+    border-radius: 2px;
+    outline: none;
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    cursor: pointer;
+}
+.three{
+    width: 130px;
+    height: 140px;
+    position: fixed;
+    top: 324px;
+    right: -89px;
+    background: #fc9a6d;
+}
+.three1{
+    width: 130px;
+    height: 150px;
+    background: #fc9a6d;
+}
+.three11{
+    margin-left: 11px;
+    margin-top: 50px;
+}
+.four{
+    width: 130px;
+    height: 146px;
+    position: fixed;
+    top: 478px;
+    right: -89px;
+    background: #ff4d04;
+}
+.four1{
+    margin-top: 5px;
+}
+.three111{
+    margin-left: 11px;
+}
