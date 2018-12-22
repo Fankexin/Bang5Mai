@@ -162,3 +162,39 @@ function navmove(){
 	}
 }
 timer = setInterval(next,3000);
+
+var one = document.getElementsByClassName('one')[0];
+var two = document.getElementsByClassName('two')[0];
+var three = document.getElementsByClassName('three')[0];
+var four = document.getElementsByClassName('four')[0];
+var three11 = document.getElementsByClassName('three11')[0];
+one.onmouseover = function (){
+    one.style.right = '0px';
+}
+one.onmouseout = function (){
+    one.style.right = '-89px';
+}
+two.onmouseover = function (){
+    two.style.right = '0px';
+}
+two.onmouseout = function (){
+    two.style.right = '-89px';
+}
+three.onmouseover = function (){
+    three.style.right = '0px';
+    three11.src="./img/erwei.png";
+    three11.classList.remove("three11");
+    three11.classList.add("three111");
+}
+three.onmouseout = function (){
+    three.style.right = '-89px';
+    three11.src="./img/serwei.png";
+    three11.classList.remove("three111");
+    three11.classList.add("three11");
+}
+four.onmouseover = function (){
+    four.style.right = '0px';
+}
+four.onmouseout = function (){
+    four.style.right = '-89px';
+}
