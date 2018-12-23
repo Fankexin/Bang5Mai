@@ -168,33 +168,54 @@ var two = document.getElementsByClassName('two')[0];
 var three = document.getElementsByClassName('three')[0];
 var four = document.getElementsByClassName('four')[0];
 var three11 = document.getElementsByClassName('three11')[0];
-one.onmouseover = function (){
-    one.style.right = '0px';
-}
-one.onmouseout = function (){
-    one.style.right = '-89px';
-}
-two.onmouseover = function (){
-    two.style.right = '0px';
-}
-two.onmouseout = function (){
-    two.style.right = '-89px';
-}
+one.style.right = '-89px';
+two.style.right = '-89px';
+three.style.right = '-89px';
+four.style.right = '-89px';
+one.setAttribute("onmouseover","numPlus(one)");
+one.setAttribute("onmouseout","numMinus(one)");
+two.setAttribute("onmouseover","numPlus(two)");
+two.setAttribute("onmouseout","numMinus(two)");
 three.onmouseover = function (){
-    three.style.right = '0px';
-    three11.src="./img/erwei.png";
+	three11.src="./img/erwei.png";
     three11.classList.remove("three11");
     three11.classList.add("three111");
+    numPlus(three);
 }
 three.onmouseout = function (){
-    three.style.right = '-89px';
-    three11.src="./img/serwei.png";
+	three11.src="./img/serwei.png";
     three11.classList.remove("three111");
     three11.classList.add("three11");
+    numMinus(three);   
 }
-four.onmouseover = function (){
-    four.style.right = '0px';
-}
-four.onmouseout = function (){
-    four.style.right = '-89px';
-}
+
+four.setAttribute("onmouseover","numPlus(four)");
+four.setAttribute("onmouseout","numMinus(four)");
+
+function numPlus(num){
+	var t;
+	if(num.style.right == '-89px'){
+		var right = parseInt(num.style.right);
+		t = setInterval(function(){
+			right = right + 1;
+			num.style.right = right +"px";		
+			if(num.style.right == '0px'){
+				clearInterval(t);
+			}
+		}, 0.1);	
+	}	
+};
+
+function numMinus(num){
+	var t;
+	if(num.style.right == '0px'){
+		var right = parseInt(num.style.right);
+		t = setInterval(function(){
+			right = right - 1;
+			num.style.right = right +"px";		
+			if(num.style.right == '-89px'){
+				clearInterval(t);
+			}
+		}, 0.1);	
+	}	
+};
