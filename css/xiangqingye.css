@@ -283,12 +283,6 @@ a{
 	overflow: hidden;
 	position: relative;
 }
-.leftTop div{
-	width: 820px;
-	position: absolute;
-	top: 0;
-	left: 0px;
-}
 .leftTop img{
 	width: 410px;
 	height: 410px;	
@@ -604,5 +598,41 @@ a{
     border: 5px solid #aca9d3;
     background-color: white;
     z-index: 1002;
-	/* overflow: auto; */
+}
+
+/*放大镜开始*/
+.leftTop1{
+	width: 820px;
+	height: 410px;
+	position: absolute;
+    top: 0;
+    left: 0;
+}
+.leftTop2{
+	width: 410px;
+    height: 410px;
+    top: 225px;
+    position:absolute;
+    border: 1px solid #d0cdc7;
+    overflow:hidden;
+    z-index: 5;
+    display: none;
+}
+.slider{
+	width: 102.5px;
+    height: 102.5px;
+    left: 0;
+    top: 0;
+    position: absolute;
+	background: #000;
+	opacity: 0.7;
+	cursor: move;
+    display: none;
+}
+.big{
+	width: 820px;
+	height: 820px;
+	position: absolute;
+    left: 0px;
+    top: 0;
 }
