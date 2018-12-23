@@ -96,3 +96,58 @@ function CloseDiv(show_div,bg_div)
 	document.getElementById(show_div).style.display='none';
 	document.getElementById(bg_div).style.display='none';
 };
+
+// 放大镜开始
+var box = document.getElementsByClassName('leftTop')[0];
+var img = document.getElementsByClassName('leftTop1')[0];
+var box2 = document.getElementsByClassName('leftTop2')[0];
+var big = document.getElementsByClassName('big')[0];
+var slider = document.getElementsByClassName('slider')[0];
+
+var sss = box.offsetLeft;
+box2.style.left = sss + 410 + 1 + 'px';
+
+//给左侧的小图绑定移入移出移动事件
+box.onmouseover = function(){
+    if(img.style.left == '0px'){
+        big.src="../img/pp0.jpeg";
+    }
+    else{
+        big.src="../img/pp1.jpeg";
+    }
+    slider.style.display = 'block';
+    box2.style.display = 'block';
+}
+box.onmouseout = function(){
+    slider.style.display = 'none';
+    box2.style.display = 'none';
+}
+box.onmousemove = function(ev){
+    var ev = ev||window.event;
+    var stt = document.documentElement.scrollTop || document.body.scrollTop;
+    //根据鼠标位置计算放大镜的位置
+    var left = ev.clientX - box.offsetLeft - slider.offsetWidth/2;
+    var top = ev.clientY - box.offsetTop - slider.offsetHeight/2 +stt;
+    var maxLeft = box.offsetWidth - slider.offsetWidth;
+    var maxTop = box.offsetHeight - slider.offsetHeight;
+    left = left>maxLeft?maxLeft:left<0?0:left;
+    top = top>maxTop?maxTop:top<0?0:top;
+    //设置放大镜的位置
+    if(img.style.left == '0px'){
+        slider.style.left = left + 'px';
+        slider.style.top = top + 'px';
+    }
+    else{
+        slider.style.left = left + 410 + 'px';
+        slider.style.top = top  + 'px';
+    }
+    //根据左侧的放大镜的位置去计算右侧大图的移动比例
+    var w = left/maxLeft;
+    var h = top/maxTop;
+    //计算大图的最大移动范围
+    var bigLeft = box2.offsetWidth - big.offsetWidth;
+    var bigTop = box2.offsetHeight - big.offsetHeight;
+    //计算大图的距离，设置位置
+    big.style.left = w*bigLeft + 'px';
+    big.style.top = h*bigTop + 'px';
+}
