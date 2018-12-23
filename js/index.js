@@ -231,11 +231,9 @@ three.onmouseover = function () {
     time3 = setInterval(function (){
         t++;
         three.style.right = t + 'px';
-        if(t >= -40){
-            three11.src="./img/erwei.png";
-            three11.classList.remove("three11");
-            three11.classList.add("three111");
-        }
+        three11.src="./img/erwei.png";
+        three11.classList.remove("three11");
+        three11.classList.add("three111");
         if(t >= 0){
             three.style.right = '0px';
             clearInterval(time3);
@@ -248,11 +246,9 @@ three.onmouseout = function () {
     time3 = setInterval(function (){
         t--;
         three.style.right = t + 'px';
-        if(t <= -40){
-            three11.src="./img/serwei.png";
-            three11.classList.remove("three111");
-            three11.classList.add("three11");
-        }
+        three11.src="./img/serwei.png";
+        three11.classList.remove("three111");
+        three11.classList.add("three11");
         if(t <= -89){
             three.style.right = '-89px';
             clearInterval(time3);
